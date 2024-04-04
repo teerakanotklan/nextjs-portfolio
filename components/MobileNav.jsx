@@ -6,7 +6,14 @@ import Nav from "./Nav";
 import Logo from "./Logo";
 import Socials from "./Socials";
 
-const MobileNav = () => {
+const MobileNav = ({
+  containerStyles,
+  linkStyles,
+  initial,
+  animate,
+  transition,
+  underlineStyles,
+}) => {
   return (
     <Sheet>
       <SheetTrigger>
@@ -17,8 +24,12 @@ const MobileNav = () => {
           <div className="flex flex-col items-center gap-y-32">
             <Logo />
             <Nav
-              containerStyles="flex flex-col items-center gap-y-6"
-              linkStyles="text-2xl"
+              containerStyles={`${containerStyles}`}
+              linkStyles={`${linkStyles}`}
+              initial={`${initial}`}
+              animate={`${animate}`}
+              transition={`${transition}`}
+              underlineStyles={`${underlineStyles}`}
             />
             <Socials containerStyles="flex gap-x-4" iconsStyles="text-2xl" />
           </div>
