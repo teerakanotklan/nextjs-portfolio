@@ -77,7 +77,7 @@ const About = () => {
   };
 
   return (
-    <section className="py-20">
+    <section className="py-20 bg-tertiary">
       <div className="container mx-auto">
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
           About me
@@ -95,14 +95,10 @@ const About = () => {
               {/* personal */}
               <TabsContent value="personal">
                 <div className="text-center xl:text-left">
-                  <h3 className="h3 text-center xl:text-center">
-                    You're never a loser until you quit trying.
+                  <h3 className="h3 text-center xl:text-center mb-8">
+                    You're never a loser until you quit trying
                   </h3>
-                  <p className="subtitle text-center xl:text-left">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quasi labore, quis vitae dolorem placeat numquam sunt?
-                    Reprehenderit enim dicta quaerat!
-                  </p>
+
                   {/* icon */}
                   <div className="grid xl:grid-cols-2 gap-4 mb-12">
                     {infoData.map((item, index) => {
