@@ -13,7 +13,7 @@ const Contact = () => {
             <span className="w-[30px] h-[2px] bg-primary"></span>
             <div>Say Hello 👋</div>
           </div>
-          <h1 className="h1 max-w-md mb-8">Let's Work Together.</h1>
+          <h1 className="h1 max-w-md mb-8">Get in touch.</h1>
         </div>
         {/* illustration */}
         <div className="hidden xl:flex w-full bg-contact_illustration_light dark:bg-contact_illustration_dark bg-contain bg-top bg-no-repeat"></div>

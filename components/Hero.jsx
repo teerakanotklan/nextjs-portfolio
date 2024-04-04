@@ -1,21 +1,19 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { Download, Send } from "lucide-react";
-
-import { RiBriefcase4Fill, RiTodoFill, RiArrowDownSLine } from "react-icons/ri";
+import { RiArrowDownSLine } from "react-icons/ri";
 
 //components
-import DevImg from "./DevImg";
-import Badge from "./Badge";
+import HeroImg from "./HeroImg";
 import Socials from "./Socials";
 
 const Hero = () => {
   return (
-    <section className="py-20 2xl:py-28">
+    <section className="py-12 xl:py-24">
       <div className="container mx-auto">
-        <div className="flex justify-center gap-x-8">
+        <div className="flex justify-between gap-x-8">
           {/* text */}
-          <div className="flex flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
+          <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
             <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
               IT Support
             </div>
@@ -34,7 +32,7 @@ const Hero = () => {
               <Link href="/resume/Teerakan_RESUME.pdf" target="_blank">
                 <Button
                   variant="primary"
-                  className="bg-tertiary dark:bg-secondary/20 gap-x-2"
+                  className="bg-secondary dark:bg-secondary/20 gap-x-2"
                 >
                   Download CV <Download size={18} />
                 </Button>
@@ -46,9 +44,16 @@ const Hero = () => {
               iconsStyles="text-foreground text-[22px] hover:text-primary transition-all"
             />
           </div>
+          {/* image */}
+          <div className="hidden xl:flex relative">
+            <HeroImg
+              containerStyles="w-[510px] h-[462px] relative"
+              imgSrc="/hero/online-world-amico.png"
+            />
+          </div>
         </div>
         {/* icon */}
-        <div className="hidden 2xl:flex lg:pt-20 absolute left-2/4 bottom-44 2xl:bottom-12 animate-bounce">
+        <div className="hidden 2xl:flex absolute left-2/4 bottom-44 2xl:bottom-12 animate-bounce">
           <RiArrowDownSLine className="text-3xl text-primary" />
         </div>
       </div>

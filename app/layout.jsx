@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/logo.svg" type="image/svg+xml" sizes="16x16" />
+        <link rel="icon" href="/logo.svg" sizes="any" />
       </head>
       <body className={outfit.className}>
         <ThemeProvider attribute="class" defaultTheme="light">

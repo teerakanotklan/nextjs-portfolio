@@ -9,7 +9,7 @@ import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
-    <header className="py-4 bg-white shadow-sm dark:bg-background sticky top-0 z-30">
+    <header className="py-4 bg-background shadow-sm dark:bg-background dark:shadow-sm sticky top-0 z-30">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <Logo />

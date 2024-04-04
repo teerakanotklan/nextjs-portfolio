@@ -101,21 +101,14 @@ const projectData = [
 
 const Work = () => {
   return (
-    <section className="relative mb-12 xl:mb-48">
+    <section className="relative py-20">
       <div className="container mx-auto">
         {/* text */}
-        <div className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
-          <h2 className="section-title mb-4">Latest Projects</h2>
-          <p className="subtitle mb-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-            temporibus?
-          </p>
-          <Link href="/projects">
-            <Button>All Projects</Button>
-          </Link>
+        <div className="max-w-[400px] mx-auto  text-center  mb-12  flex flex-col justify-center items-center">
+          <h2 className="section-title">Latest Projects</h2>
         </div>
-        {/* slider */}
-        <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
+        {/* slides */}
+        <div className="right-0 top-0">
           <Swiper
             className="h-[480px]"
             slidesPerView={1}
@@ -137,6 +130,11 @@ const Work = () => {
               );
             })}
           </Swiper>
+        </div>
+        <div className="flex items-center justify-center my-2">
+          <Link href="/projects">
+            <Button>All Projects</Button>
+          </Link>
         </div>
       </div>
     </section>
