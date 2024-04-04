@@ -104,7 +104,7 @@ const Projects = () => {
       : project.category === category;
   });
   return (
-    <section className="py-20 2xl:py-24">
+    <section className="mt-20">
       <div className="container mx-auto">
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
           My Projects

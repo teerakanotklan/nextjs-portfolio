@@ -2,12 +2,7 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { Download, Send } from "lucide-react";
 
-import {
-  RiBriefcase4Fill,
-  RiTeamFill,
-  RiTodoFill,
-  RiArrowDownSLine,
-} from "react-icons/ri";
+import { RiBriefcase4Fill, RiTodoFill, RiArrowDownSLine } from "react-icons/ri";
 
 //components
 import DevImg from "./DevImg";
@@ -60,17 +55,10 @@ const Hero = () => {
             />
             {/* badge 2 */}
             <Badge
-              containerStyles="absolute top-[80%] -left-[1rem]"
+              containerStyles="absolute top-[55%] -right-8"
               icon={<RiTodoFill />}
               endCountNum={2}
               badgeText="Finished Projects"
-            />
-            {/* badge 3 */}
-            <Badge
-              containerStyles="absolute top-[55%] -right-8"
-              icon={<RiTeamFill />}
-              endCountNum={8}
-              badgeText="Happy Clients"
             />
             <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
             <DevImg
