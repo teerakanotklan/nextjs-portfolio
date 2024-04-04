@@ -18,21 +18,15 @@ const Header = () => {
             <Nav
               containerStyles="hidden xl:flex gap-x-8 items-center"
               linkStyles="relative hover:text-primary transition-all"
-              initial='{{ y: "-100%" }}'
-              animate="{{ y: 0 }}"
-              transition='{{ type: "tween" }}'
-              underlineStyles="absolute left-0 top-full h-[2px] bg-primary w-full"
+              underlineStyles="absolute top-full h-[2px] bg-primary w-full"
             />
             <ThemeToggler />
             {/* mobile nav */}
             <div className="xl:hidden">
               <MobileNav
-                containerStyles="flex flex-col items-center gap-y-6 text-2xl "
-                linkStyles="relative"
-                initial='{{ x: "-100%" }}'
-                animate="{{ x: 0 }}"
-                transition='{{ type: "tween" }}'
-                underlineStyles="absolute right-0 top-full h-[2px] bg-primary w-full"
+                containerStyles="flex flex-col items-center h-full text-xl gap-y-8"
+                linkStyles="relative transition-all"
+                underlineStyles="absolute top-full h-[2px] bg-primary w-full"
               />
             </div>
           </div>

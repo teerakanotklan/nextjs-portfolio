@@ -14,15 +14,9 @@ const links = [
   { path: "/contact", name: "contact" },
 ];
 
-const Nav = ({
-  containerStyles,
-  linkStyles,
-  initial,
-  animate,
-  transition,
-  underlineStyles,
-}) => {
+const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
   const path = usePathname();
+
   return (
     <div className={`${containerStyles}`}>
       {links.map((link, index) => {
@@ -34,9 +28,7 @@ const Nav = ({
           >
             {link.path === path && (
               <motion.span
-                initial={`${initial}`}
-                animate={`${animate}`}
-                transition={`${transition}`}
+                initial={{ y: "-100%" }}
                 layoutId="underline"
                 className={`${underlineStyles}`}
               />
