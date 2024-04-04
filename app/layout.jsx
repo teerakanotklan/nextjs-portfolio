@@ -15,14 +15,14 @@ export const metadata = {
   authors: [{ name: "Teerakan", url: "https://teerakanotklan.github.io" }],
   keywords: ["Teerakan", "Portfolio", "IT Support"],
   creator: "Teerakan",
-  publisher: "GitHub",
+  publisher: "Teerakan",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/logo.svg" sizes="any" />
+        <link rel="icon" href="/logo.png" sizes="any" />
       </head>
       <body className={outfit.className}>
         <ThemeProvider attribute="class" defaultTheme="light">
