@@ -1,101 +1,96 @@
-"use client";
-import Link from "next/link";
-import { Button } from "./ui/button";
+'use client';
 
-// import swiper react components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// import swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
-// import required modules
-import { Pagination } from "swiper/modules";
+import Link from 'next/link';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 // components
-import ProjectCard from "./ProjectCard";
+import { Button } from './ui/button';
+import ProjectCard from './ProjectCard';
 
 const projectData = [
   {
-    image: "/work/3.png",
-    category: "react js",
-    name: "Nexa Website",
+    image: '/work/3.png',
+    category: 'react js',
+    name: 'Nexa Website',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?",
-    link: "/",
-    github: "/",
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?',
+    link: '/',
+    github: '/',
   },
   {
-    image: "/work/4.png",
-    category: "next js",
-    name: "Solistic Website",
+    image: '/work/4.png',
+    category: 'next js',
+    name: 'Solistic Website',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?",
-    link: "/",
-    github: "/",
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?',
+    link: '/',
+    github: '/',
   },
   {
-    image: "/work/2.png",
-    category: "react js",
-    name: "Lumina Website",
+    image: '/work/2.png',
+    category: 'react js',
+    name: 'Lumina Website',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?",
-    link: "/",
-    github: "/",
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?',
+    link: '/',
+    github: '/',
   },
   {
-    image: "/work/1.png",
-    category: "next js",
-    name: "Evolve Website",
+    image: '/work/1.png',
+    category: 'next js',
+    name: 'Evolve Website',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?",
-    link: "/",
-    github: "/",
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?',
+    link: '/',
+    github: '/',
   },
   {
-    image: "/work/2.png",
-    category: "react js",
-    name: "Ignite Website",
+    image: '/work/2.png',
+    category: 'react js',
+    name: 'Ignite Website',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?",
-    link: "/",
-    github: "/",
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?',
+    link: '/',
+    github: '/',
   },
   {
-    image: "/work/4.png",
-    category: "next js",
-    name: "Envision Website",
+    image: '/work/4.png',
+    category: 'next js',
+    name: 'Envision Website',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?",
-    link: "/",
-    github: "/",
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?',
+    link: '/',
+    github: '/',
   },
   {
-    image: "/work/3.png",
-    category: "react js",
-    name: "Serenity Website",
+    image: '/work/3.png',
+    category: 'react js',
+    name: 'Serenity Website',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?",
-    link: "/",
-    github: "/",
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?',
+    link: '/',
+    github: '/',
   },
   {
-    image: "/work/1.png",
-    category: "fullstack",
-    name: "Nova Website",
+    image: '/work/1.png',
+    category: 'fullstack',
+    name: 'Nova Website',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?",
-    link: "/",
-    github: "/",
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?',
+    link: '/',
+    github: '/',
   },
   {
-    image: "/work/4.png",
-    category: "fullstack",
-    name: "Zanith Website",
+    image: '/work/4.png',
+    category: 'fullstack',
+    name: 'Zanith Website',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?",
-    link: "/",
-    github: "/",
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?',
+    link: '/',
+    github: '/',
   },
 ];
 

@@ -1,6 +1,6 @@
-"use client";
-import { CountdownTimerIcon } from "@radix-ui/react-icons";
-import CountUp from "react-countup";
+'use client';
+
+import CountUp from 'react-countup';
 
 const Badge = ({
   containerStyles,

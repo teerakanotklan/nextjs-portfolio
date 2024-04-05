@@ -1,5 +1,5 @@
 // components
-import Socials from "./Socials";
+import Socials from './Socials';
 
 const Footer = () => {
   return (

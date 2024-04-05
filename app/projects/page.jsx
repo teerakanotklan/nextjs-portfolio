@@ -1,60 +1,63 @@
-"use client";
-import React, { useState } from "react";
-import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs";
-import ProjectCard from "@/components/ProjectCard";
+'use client';
+
+import React, { useState } from 'react';
+
+// components
+import { Tabs, TabsList, TabsContent, TabsTrigger } from '@/components/ui/tabs';
+import ProjectCard from '@/components/ProjectCard';
 
 const projectData = [
   {
-    image: "/work/3.png",
-    category: "react js",
-    name: "Nexa Website",
+    image: '/work/3.png',
+    category: 'react js',
+    name: 'Nexa Website',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?",
-    link: "/",
-    github: "/",
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?',
+    link: '/',
+    github: '/',
   },
   {
-    image: "/work/4.png",
-    category: "next js",
-    name: "Solistic Website",
+    image: '/work/4.png',
+    category: 'next js',
+    name: 'Solistic Website',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?",
-    link: "/",
-    github: "/",
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?',
+    link: '/',
+    github: '/',
   },
   {
-    image: "/work/2.png",
-    category: "react js",
-    name: "Lumina Website",
+    image: '/work/2.png',
+    category: 'react js',
+    name: 'Lumina Website',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?",
-    link: "/",
-    github: "/",
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?',
+    link: '/',
+    github: '/',
   },
   {
-    image: "/work/1.png",
-    category: "fullstack",
-    name: "Evolve Website",
+    image: '/work/1.png',
+    category: 'fullstack',
+    name: 'Evolve Website',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?",
-    link: "/",
-    github: "/",
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?',
+    link: '/',
+    github: '/',
   },
 ];
 
 // remove category duplicates
 const uniqueCategories = [
-  "all projects",
+  'all projects',
   ...new Set(projectData.map((item) => item.category)),
 ];
 
 const Projects = () => {
   const [categories, setCategories] = useState(uniqueCategories);
-  const [category, setCategory] = useState("all projects");
+  const [category, setCategory] = useState('all projects');
 
   const filterProjects = projectData.filter((project) => {
     // if category is 'all projects' return all projects, else filter by category
-    return category === "all projects"
+    return category === 'all projects'
       ? project
       : project.category === category;
   });

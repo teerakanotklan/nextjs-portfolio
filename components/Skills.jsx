@@ -1,27 +1,29 @@
-import { Network, Laptop, Wrench } from "lucide-react";
+import { Network, Laptop, Wrench } from 'lucide-react';
+
+// components
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from '@/components/ui/card';
 
 const skillData = [
   {
     icon: <Network size={72} strokeWidth={0.8} />,
-    title: "Network",
-    name: "TCP/IPv4, VLAN, LAN, WLAN, DHCP",
+    title: 'Network',
+    name: 'TCP/IPv4, VLAN, LAN, WLAN, DHCP',
   },
   {
     icon: <Laptop size={72} strokeWidth={0.8} />,
-    title: "Computer",
-    name: "Basic hardware and software computer knowledge, Window 10, Window 11, Linux(Ubuntu) ",
+    title: 'Computer',
+    name: 'Basic hardware and software computer knowledge, Window 10, Window 11, Linux(Ubuntu) ',
   },
   {
     icon: <Wrench size={72} strokeWidth={0.8} />,
-    title: "Tools",
-    name: "VS code, Putty, VMware Workstation",
+    title: 'Tools',
+    name: 'VS code, Putty, VMware Workstation',
   },
 ];
 

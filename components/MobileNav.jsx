@@ -1,24 +1,18 @@
-// link (next js)
-import Link from "next/link";
-
-// next hooks
-import { usePathname } from "next/navigation";
-
-// framer motion
-import { motion } from "framer-motion";
-
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { AlignJustify } from "lucide-react";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { motion } from 'framer-motion';
+import { AlignJustify } from 'lucide-react';
 
 // components
-import Logo from "./Logo";
-import Socials from "./Socials";
+import Logo from './Logo';
+import Socials from './Socials';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const links = [
-  { path: "/", name: "home" },
-  { path: "/projects", name: "projects" },
-  { path: "/certificates", name: "certificates" },
-  { path: "/contact", name: "contact" },
+  { path: '/', name: 'home' },
+  { path: '/projects', name: 'projects' },
+  { path: '/certificates', name: 'certificates' },
+  { path: '/contact', name: 'contact' },
 ];
 
 const MobileNav = ({ containerStyles, linkStyles, underlineStyles }) => {
@@ -42,9 +36,9 @@ const MobileNav = ({ containerStyles, linkStyles, underlineStyles }) => {
                   >
                     {link.path === path && (
                       <motion.span
-                        initial={{ y: "-100%", x: "-100%" }}
+                        initial={{ y: '-100%', x: '-100%' }}
                         animate={{ y: 0, x: 0 }}
-                        transition={{ type: "tween" }}
+                        transition={{ type: 'tween' }}
                         layoutId="underline"
                         className={`${underlineStyles}`}
                       />

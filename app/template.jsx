@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 // variants
 const variants = {
@@ -15,7 +15,7 @@ const template = ({ children }) => {
         variants={variants}
         initial="hidden"
         animate="enter"
-        transition={{ type: "linear", delay: 0.2, duration: 0.4 }}
+        transition={{ type: 'linear', delay: 0.2, duration: 0.4 }}
       >
         {children}
       </motion.main>

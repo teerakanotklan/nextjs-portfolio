@@ -1,5 +1,3 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
 import {
   User2,
   MailIcon,
@@ -8,64 +6,66 @@ import {
   GraduationCap,
   Calendar,
   Briefcase,
-  Phone,
-} from "lucide-react";
+} from 'lucide-react';
+
+// components
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const infoData = [
   {
     icon: <User2 size={20} />,
-    text: "Teerakan Otklan",
+    text: 'Teerakan Otklan',
   },
   {
     icon: <PhoneCall size={20} />,
-    text: "+668 8626 3064",
+    text: '+668 8626 3064',
   },
   {
     icon: <MailIcon size={20} />,
-    text: "teerakan.otk@gmail.com",
+    text: 'teerakan.otk@gmail.com',
   },
   {
     icon: <Calendar size={20} />,
-    text: "Born on 5 July, 2003",
+    text: 'Born on 5 July, 2003',
   },
   {
     icon: <GraduationCap size={20} />,
-    text: "High vocational certificate on Computer Technology",
+    text: 'High vocational certificate on Computer Technology',
   },
   {
     icon: <HomeIcon size={20} />,
-    text: "31 Moo 5, Samrong Subdistrict, Mueang Surin District, Surin 32000, Thailand",
+    text: '31 Moo 5, Samrong Subdistrict, Mueang Surin District, Surin 32000, Thailand',
   },
 ];
 
 const qualificationData = [
   {
-    title: "education",
+    title: 'education',
     data: [
       {
-        academy: "Surin Technical College",
-        qualification: "High vocational certificate of Computer Technology",
-        years: "May. 2022 - Mar. 2024",
+        academy: 'Surin Technical College',
+        qualification: 'High vocational certificate of Computer Technology',
+        years: 'May. 2022 - Mar. 2024',
       },
       {
-        academy: "Surin Technical College",
-        qualification: "Vocational certificate of Computer Technology",
-        years: "May. 2019 - Mar. 2022",
+        academy: 'Surin Technical College',
+        qualification: 'Vocational certificate of Computer Technology',
+        years: 'May. 2019 - Mar. 2022',
       },
     ],
   },
   {
-    title: "experience",
+    title: 'experience',
     data: [
       {
-        company: "Surindra Rajabhat University (ARIT) - Surin, Thailand",
-        role: "IT Support",
-        years: "Mar. 2023 - May. 2023",
+        company: 'Surindra Rajabhat University (ARIT) - Surin, Thailand',
+        role: 'IT Support',
+        years: 'Mar. 2023 - May. 2023',
       },
       {
-        company: "Ruampaet Dr.ANAN Hospital - Surin, Thailand",
-        role: "IT Support",
-        years: "Mar. 2021 - Sep. 2021",
+        company: 'Ruampaet Dr.ANAN Hospital - Surin, Thailand',
+        role: 'IT Support',
+        years: 'Mar. 2021 - Sep. 2021',
       },
     ],
   },
@@ -134,12 +134,12 @@ const About = () => {
                       <div className="flex gap-x-4 items-center text-[22px] text-primary">
                         <Briefcase />
                         <h4 className="captalize font-medium">
-                          {getData(qualificationData, "experience").title}
+                          {getData(qualificationData, 'experience').title}
                         </h4>
                       </div>
                       {/* list */}
                       <div className="flex flex-col gap-y-8">
-                        {getData(qualificationData, "experience").data.map(
+                        {getData(qualificationData, 'experience').data.map(
                           (item, index) => {
                             const { company, role, years } = item;
                             return (
@@ -169,12 +169,12 @@ const About = () => {
                       <div className="flex gap-x-4 items-center text-[22px] text-primary">
                         <GraduationCap />
                         <h4 className="captalize font-medium">
-                          {getData(qualificationData, "education").title}
+                          {getData(qualificationData, 'education').title}
                         </h4>
                       </div>
                       {/* list */}
                       <div className="flex flex-col gap-y-8">
-                        {getData(qualificationData, "education").data.map(
+                        {getData(qualificationData, 'education').data.map(
                           (item, index) => {
                             const { academy, qualification, years } = item;
                             return (

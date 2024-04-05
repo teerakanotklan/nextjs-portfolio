@@ -1,6 +1,8 @@
-import Image from "next/image";
-import { Card, CardHeader } from "./ui/card";
-import { Badge } from "./ui/badge";
+import Image from 'next/image'
+
+// components
+import { Card, CardHeader } from './ui/card'
+import { Badge } from './ui/badge'
 
 const CertificateCard = ({ certificate }) => {
   return (
@@ -27,7 +29,7 @@ const CertificateCard = ({ certificate }) => {
         </p>
       </div>
     </Card>
-  );
-};
+  )
+}
 
-export default CertificateCard;
+export default CertificateCard

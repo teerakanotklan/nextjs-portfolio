@@ -1,46 +1,49 @@
-"use client";
-import React, { useState } from "react";
-import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs";
-import CertificateCard from "@/components/CertificateCard";
+'use client'
+
+import React, { useState } from 'react'
+
+// components
+import { Tabs, TabsList, TabsContent, TabsTrigger } from '@/components/ui/tabs'
+import CertificateCard from '@/components/CertificateCard'
 
 const certificateData = [
   {
-    image: "/certificates/2024/img-1.png",
-    category: "2024",
-    name: "1st Runner-up, Cloud Computing Management Skills at High Vocational Certificate Level",
+    image: '/certificates/2024/img-1.png',
+    category: '2024',
+    name: '1st Runner-up, Cloud Computing Management Skills at High Vocational Certificate Level',
     description:
-      "33rd Professional Skills Competition and Basic Skills Academic Conference of the Future Professional Organization of Thailand, Northeastern Region.",
+      '33rd Professional Skills Competition and Basic Skills Academic Conference of the Future Professional Organization of Thailand, Northeastern Region.',
   },
   {
-    image: "/certificates/2024/img-2.png",
-    category: "2024",
-    name: "1st Runner-up, Cloud Computing Management Skills at High Vocational Certificate Level",
+    image: '/certificates/2024/img-2.png',
+    category: '2024',
+    name: '1st Runner-up, Cloud Computing Management Skills at High Vocational Certificate Level',
     description:
-      "33rd Professional Skills Competition and Basic Skills Academic Conference of the Future Professional Organization of Thailand, National Region.",
+      '33rd Professional Skills Competition and Basic Skills Academic Conference of the Future Professional Organization of Thailand, National Region.',
   },
   {
-    image: "/certificates/2023/img-1.png",
-    category: "2023",
-    name: "Participated, Cloud Computing Management Skills at High Vocational Certificate Level",
+    image: '/certificates/2023/img-1.png',
+    category: '2023',
+    name: 'Participated, Cloud Computing Management Skills at High Vocational Certificate Level',
     description:
-      "32nd Professional Skills Competition and Basic Skills Academic Conference of the Future Professional Organization of Thailand, Northeastern Region.",
+      '32nd Professional Skills Competition and Basic Skills Academic Conference of the Future Professional Organization of Thailand, Northeastern Region.',
   },
-];
+]
 
 // remove category duplicates
 const uniqueCategories = [
-  "all",
+  'all',
   ...new Set(certificateData.map((item) => item.category)),
-];
+]
 
 const Certificates = () => {
-  const [categories, setCategories] = useState(uniqueCategories);
-  const [category, setCategory] = useState("all");
+  const [categories, setCategories] = useState(uniqueCategories)
+  const [category, setCategory] = useState('all')
 
   const filterCertificate = certificateData.filter((certificate) => {
     // if category is 'all' return all, else filter by category
-    return category === "all" ? certificate : certificate.category === category;
-  });
+    return category === 'all' ? certificate : certificate.category === category
+  })
   return (
     <section className="mt-20">
       <div className="container mx-auto">
@@ -60,23 +63,23 @@ const Certificates = () => {
                 >
                   {category}
                 </TabsTrigger>
-              );
+              )
             })}
           </TabsList>
           {/* tabs content */}
-          <div className="text-lg xl:mt-8 grid grid-cols 1 xl:grid-cols-2 gap-4">
+          <div className="text-lg xl:mt-8 grid grid-cols 1 2xl:grid-cols-2 gap-4">
             {filterCertificate.map((certificate, index) => {
               return (
                 <TabsContent value={category} key={index}>
                   <CertificateCard certificate={certificate} />
                 </TabsContent>
-              );
+              )
             })}
           </div>
         </Tabs>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Certificates;
+export default Certificates

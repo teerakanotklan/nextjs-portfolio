@@ -1,20 +1,19 @@
-"use client";
+'use client';
 
-import { RiGithubFill, RiFacebookFill, RiLineFill } from "react-icons/ri";
-
-import Link from "next/link";
+import Link from 'next/link';
+import { RiGithubFill, RiFacebookFill, RiLineFill } from 'react-icons/ri';
 
 const icons = [
   {
-    path: "https://github.com/teerakanotklan",
+    path: 'https://github.com/teerakanotklan',
     name: <RiGithubFill />,
   },
   {
-    path: "https://www.facebook.com/teerakan.otklan",
+    path: 'https://www.facebook.com/teerakan.otklan',
     name: <RiFacebookFill />,
   },
   {
-    path: "https://line.me/ti/p/nmyUN_t-fE",
+    path: 'https://line.me/ti/p/nmyUN_t-fE',
     name: <RiLineFill />,
   },
 ];

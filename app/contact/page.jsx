@@ -1,6 +1,8 @@
-import { MailIcon, PhoneCall } from "lucide-react";
-import { RiArrowDownSLine } from "react-icons/ri";
-import Form from "@/components/Form";
+import { MailIcon, PhoneCall } from 'lucide-react';
+import { RiArrowDownSLine } from 'react-icons/ri';
+
+// components
+import ContactForm from '@/components/ContactForm';
 
 const Contact = () => {
   return (
@@ -37,7 +39,7 @@ const Contact = () => {
             <div>+668 862 63064</div>
           </div>
         </div>
-        <Form />
+        <ContactForm />
       </div>
     </div>
   );
