@@ -34,7 +34,7 @@ const Hero = () => {
                   variant="primary"
                   className="bg-secondary dark:bg-secondary/20 gap-x-2"
                 >
-                  Download CV <Download size={18} />
+                  RESUME <Download size={18} />
                 </Button>
               </Link>
             </div>

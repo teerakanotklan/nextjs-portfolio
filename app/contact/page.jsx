@@ -1,4 +1,4 @@
-import { MailIcon, HomeIcon, PhoneCall } from "lucide-react";
+import { MailIcon, PhoneCall } from "lucide-react";
 import { RiArrowDownSLine } from "react-icons/ri";
 import Form from "@/components/Form";
 

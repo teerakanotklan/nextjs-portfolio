@@ -10,7 +10,7 @@ const Form = () => {
     <form className="flex flex-col gap-y-4 xl:py-0 py-8">
       {/* input */}
       <div className="relative flex items-center">
-        <Input type="name" id="name" placeholder="Name" />
+        <Input type="text" id="name" placeholder="Name" />
         <User className="absolute right-6" size={20} />
       </div>
       {/* input */}
