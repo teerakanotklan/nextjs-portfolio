@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { User, MailIcon, ArrowRightIcon, MessageSquare } from 'lucide-react'
 import emailjs from '@emailjs/browser'
 
@@ -10,25 +10,32 @@ import { Input } from './ui/input'
 import { Textarea } from './ui/textarea'
 
 const ContactForm = () => {
-  const form = useRef()
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState(false)
 
-  const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID
-  const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID
-  const publicKEY = process.env.NEXT_PUBLIC_KEY
+  const form = useRef()
 
   const sendEmail = (e) => {
     e.preventDefault()
+    setSuccess(false)
+    setError(false)
 
     emailjs
-      .sendForm(serviceID, templateID, form.current, {
-        publicKey: publicKEY,
-      })
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: process.env.NEXT_PUBLIC_KEY,
+        }
+      )
       .then(
         () => {
-          console.log('SUCCESS!')
+          setSuccess(true)
+          form.current.reset()
         },
         (error) => {
-          console.log('FAILED...', error.text)
+          setSuccess(true)
         }
       )
   }
@@ -66,6 +73,16 @@ const ContactForm = () => {
         Let's Talk
         <ArrowRightIcon size={20} />
       </Button>
+      {success && (
+        <span className="text-green-600 font-semibold">
+          Your message has been sent successfully!
+        </span>
+      )}
+      {error && (
+        <span className="text-red-600 font-semibold">
+          Something went wrong!
+        </span>
+      )}
     </form>
   )
 }
