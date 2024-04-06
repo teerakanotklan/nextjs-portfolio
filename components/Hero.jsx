@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { Download, Send } from 'lucide-react';
-import { RiArrowDownSLine } from 'react-icons/ri';
+import Link from 'next/link'
+import Image from 'next/image'
+import { Download, Send } from 'lucide-react'
+import { RiArrowDownSLine } from 'react-icons/ri'
 
 //components
-import Socials from './Socials';
-import { Button } from './ui/button';
+import Socials from './Socials'
+import { Button } from './ui/button'
 
 const Hero = () => {
   return (
@@ -45,11 +45,7 @@ const Hero = () => {
             />
           </div>
           {/* image */}
-          <div className="hidden xl:flex relative">
-            <div className="w-[510px] h-[460px] relative">
-              <Image src="/hero/hero.png" fill priority alt="" />
-            </div>
-          </div>
+          <div className="hidden xl:flex w-full bg-hero_section bg-contain bg-top bg-no-repeat"></div>
         </div>
         {/* icon */}
         <div className="hidden 2xl:flex absolute left-2/4 bottom-44 2xl:bottom-12 animate-bounce">
@@ -57,7 +53,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

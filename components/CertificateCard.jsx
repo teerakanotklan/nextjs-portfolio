@@ -14,7 +14,7 @@ const CertificateCard = ({ certificate }) => {
             className="absolute mx-auto"
             src={certificate.image}
             fill
-            alt=""
+            alt={certificate.name}
             priority
           />
         </div>

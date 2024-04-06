@@ -1,66 +1,26 @@
-'use client';
+'use client'
 
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 // components
-import { Tabs, TabsList, TabsContent, TabsTrigger } from '@/components/ui/tabs';
-import ProjectCard from '@/components/ProjectCard';
-
-const projectData = [
-  {
-    image: '/work/3.png',
-    category: 'react js',
-    name: 'Nexa Website',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?',
-    link: '/',
-    github: '/',
-  },
-  {
-    image: '/work/4.png',
-    category: 'next js',
-    name: 'Solistic Website',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?',
-    link: '/',
-    github: '/',
-  },
-  {
-    image: '/work/2.png',
-    category: 'react js',
-    name: 'Lumina Website',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?',
-    link: '/',
-    github: '/',
-  },
-  {
-    image: '/work/1.png',
-    category: 'fullstack',
-    name: 'Evolve Website',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam?',
-    link: '/',
-    github: '/',
-  },
-];
+import { Tabs, TabsList, TabsContent, TabsTrigger } from '@/components/ui/tabs'
+import ProjectCard from '@/components/ProjectCard'
+import { projectData } from '@/data/projectData'
 
 // remove category duplicates
 const uniqueCategories = [
   'all projects',
   ...new Set(projectData.map((item) => item.category)),
-];
+]
 
 const Projects = () => {
-  const [categories, setCategories] = useState(uniqueCategories);
-  const [category, setCategory] = useState('all projects');
+  const [categories, setCategories] = useState(uniqueCategories)
+  const [category, setCategory] = useState('all projects')
 
   const filterProjects = projectData.filter((project) => {
     // if category is 'all projects' return all projects, else filter by category
-    return category === 'all projects'
-      ? project
-      : project.category === category;
-  });
+    return category === 'all projects' ? project : project.category === category
+  })
   return (
     <section className="mt-20">
       <div className="container mx-auto">
@@ -80,7 +40,7 @@ const Projects = () => {
                 >
                   {category}
                 </TabsTrigger>
-              );
+              )
             })}
           </TabsList>
           {/* tabs content */}
@@ -90,13 +50,13 @@ const Projects = () => {
                 <TabsContent value={category} key={index}>
                   <ProjectCard project={project} />
                 </TabsContent>
-              );
+              )
             })}
           </div>
         </Tabs>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects

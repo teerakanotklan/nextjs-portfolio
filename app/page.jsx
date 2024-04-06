@@ -1,8 +1,8 @@
 // components
-import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Skills from '@/components/Skills';
-import Work from '@/components/Work';
+import Hero from '@/components/Hero'
+import About from '@/components/About'
+import Skills from '@/components/Skills'
+import Project from '@/components/Project'
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
-      <Work />
+      <Project />
     </main>
-  );
+  )
 }
