@@ -1,44 +1,44 @@
-'use client'
+'use client';
 
-import React, { useRef, useState } from 'react'
-import { User, MailIcon, ArrowRightIcon, MessageSquare } from 'lucide-react'
-import emailjs from '@emailjs/browser'
+import React, { useRef, useState } from 'react';
+import { User, MailIcon, ArrowRightIcon, MessageSquare } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 // components
-import { Button } from './ui/button'
-import { Input } from './ui/input'
-import { Textarea } from './ui/textarea'
+import { Button } from './ui/button';
+import { Input } from './ui/input';
+import { Textarea } from './ui/textarea';
 
 const ContactForm = () => {
-  const [success, setSuccess] = useState(false)
-  const [error, setError] = useState(false)
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
-  const form = useRef()
+  const form = useRef();
 
   const sendEmail = (e) => {
-    e.preventDefault()
-    setSuccess(false)
-    setError(false)
+    e.preventDefault();
+    setSuccess(false);
+    setError(false);
 
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         form.current,
         {
-          publicKey: process.env.NEXT_PUBLIC_KEY,
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
         }
       )
       .then(
         () => {
-          setSuccess(true)
-          form.current.reset()
+          setSuccess(true);
+          form.current.reset();
         },
         (error) => {
-          setSuccess(true)
+          setSuccess(true);
         }
-      )
-  }
+      );
+  };
 
   return (
     <form
@@ -84,7 +84,7 @@ const ContactForm = () => {
         </span>
       )}
     </form>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;

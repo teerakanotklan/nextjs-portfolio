@@ -60,41 +60,48 @@
   }
 }
 
-.h1 {
-  @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[1px] font-bold;
+/* ========================================== TAILWIND STYLES */
+@layer utilities {
+  .h1 {
+    @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[1px] font-bold;
+  }
+
+  .h2 {
+    @apply text-4xl font-bold;
+  }
+
+  .h3 {
+    @apply text-3xl font-bold;
+  }
+
+  .h4 {
+    @apply text-[22px] font-semibold;
+  }
+
+  .subtitle {
+    @apply text-muted-foreground text-lg mb-8 font-light;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold relative w-max flex items-center justify-between gap-x-3;
+  }
+
+  .badge {
+    @apply z-10 w-[200px] h-[68px] bg-white dark:backdrop-blur-[44px] shadow-2xl p-4 rounded-[10px] flex items-center gap-x-4;
+  }
+
+  .bg-footer {
+    @apply bg-[#fff] dark:bg-background;
+  }
+
+  .navbar {
+    @apply py-4 bg-background shadow-sm dark:bg-background dark:shadow-sm sticky top-0 z-30;
+  }
 }
 
-.h2 {
-  @apply text-4xl font-bold;
-}
-
-.h3 {
-  @apply text-3xl font-bold;
-}
-
-.h4 {
-  @apply text-[22px] font-semibold;
-}
-
-.subtitle {
-  @apply text-muted-foreground text-lg mb-8 font-light;
-}
-
-.section-title {
-  @apply text-4xl font-bold relative w-max flex items-center justify-between gap-x-3;
-}
-
-.badge {
-  @apply z-10 w-[200px] h-[68px] bg-white dark:backdrop-blur-[44px] shadow-2xl p-4 rounded-[10px] flex items-center gap-x-4;
-}
-
-/* swiper bullets styles */
+/* ===== swiper bullets styles */
 .swiper-horizontal > .section-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
   @apply bg-primary;
-}
-
-.bg-footer {
-  @apply bg-[#fff] dark:bg-background;
 }
