@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Card, CardHeader } from "./ui/card";
 import { Badge } from "./ui/badge";
 
-const CertificateCard = ({ certificate }) => {
+const RewardCard = ({ certificate }) => {
   return (
     <Card className='group overflow-hidden relative'>
       <CardHeader className='p-0'>
@@ -30,4 +30,4 @@ const CertificateCard = ({ certificate }) => {
   );
 };
 
-export default CertificateCard;
+export default RewardCard;

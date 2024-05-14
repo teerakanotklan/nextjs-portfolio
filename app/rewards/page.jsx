@@ -5,29 +5,29 @@ import React, { useState } from "react";
 
 // components
 import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs";
-import CertificateCard from "@/components/CertificateCard";
+import RewardCard from "@/components/RewardCard";
 
 // constants
-import { certificateData } from "@/constants";
+import { rewardData } from "@/constants";
 
 // remove category duplicates
 const uniqueCategories = [
   "all",
-  ...new Set(certificateData.map((item) => item.category)),
+  ...new Set(rewardData.map((item) => item.category)),
 ];
 
-const Certificates = () => {
+const Rewards = () => {
   const [category, setCategory] = useState("all");
   const [categories, setCategories] = useState(uniqueCategories);
 
-  const filterCertificates = certificateData.filter((certificate) => {
+  const filterCertificates = rewardData.filter((certificate) => {
     return category === "all" ? certificate : certificate.category === category;
   });
   return (
     <section className='mt-20'>
       <div className='container mx-auto'>
         <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
-          My Certificates
+          My Rewards
         </h2>
 
         {/* tabs */}
@@ -52,7 +52,7 @@ const Certificates = () => {
             {filterCertificates.map((certificate, index) => {
               return (
                 <TabsContent value={category} key={index}>
-                  <CertificateCard certificate={certificate} />
+                  <RewardCard certificate={certificate} />
                 </TabsContent>
               );
             })}
@@ -63,4 +63,4 @@ const Certificates = () => {
   );
 };
 
-export default Certificates;
+export default Rewards;

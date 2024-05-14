@@ -22,8 +22,8 @@ export const navLinks = [
     route: "/projects",
   },
   {
-    label: "Certificates",
-    route: "/certificates",
+    label: "Rewards",
+    route: "/rewards",
   },
   {
     label: "Contact",
@@ -119,11 +119,6 @@ export const skillData = [
       "Basic hardware and software computer knowledge, Window 10, Window 11, Linux(Ubuntu) ",
     icon: <Laptop size={72} strokeWidth={0.8} />,
   },
-  {
-    title: "Tools",
-    label: "VS code, Putty, VMware Workstation",
-    icon: <Wrench size={72} strokeWidth={0.8} />,
-  },
 ];
 
 export const projectData = [
@@ -131,7 +126,7 @@ export const projectData = [
     category: "React JS",
     title: "Nexa Website",
     label: "React Project",
-    image: "/images/work/1.png",
+    image: "/images/work/image001.png",
     route: "/",
     github: "/",
   },
@@ -139,7 +134,7 @@ export const projectData = [
     category: "Next JS",
     title: "Lumina Website",
     label: "Next Project",
-    image: "/images/work/2.png",
+    image: "/images/work/image002.png",
     route: "/",
     github: "/",
   },
@@ -147,7 +142,7 @@ export const projectData = [
     category: "FullStack",
     title: "Nexa Website",
     label: "FullStack Project",
-    image: "/images/work/3.png",
+    image: "/images/work/image003.png",
     route: "/",
     github: "/",
   },
@@ -155,7 +150,7 @@ export const projectData = [
     category: "Next JS",
     title: "Nexa Website",
     label: "Next Project",
-    image: "/images/work/4.png",
+    image: "/images/work/image004.png",
     route: "/",
     github: "/",
   },
@@ -163,7 +158,7 @@ export const projectData = [
     category: "React JS",
     title: "Nexa Website",
     label: "React Project",
-    image: "/images/work/1.png",
+    image: "/images/work/image001.png",
     route: "/",
     github: "/",
   },
@@ -171,20 +166,20 @@ export const projectData = [
     category: "Next JS",
     title: "Evolve Website",
     label: "Next Project",
-    image: "/images/work/3.png",
+    image: "/images/work/image003.png",
     route: "/",
     github: "/",
   },
 ];
 
-export const certificateData = [
+export const rewardData = [
   {
     category: "2024",
     title:
       "1st Runner-up, Cloud Computing Management Skills at High Vocational Certificate Level",
     label:
       "33rd Professional Skills Competition and Basic Skills Academic Conference of the Future Professional Organization of Thailand, Northeastern Region.",
-    image: "/images/certificates/2024/img-1.png",
+    image: "/images/reward/2024/img001.png",
   },
   {
     category: "2024",
@@ -192,7 +187,7 @@ export const certificateData = [
       "1st Runner-up, Cloud Computing Management Skills at High Vocational Certificate Level",
     label:
       "33rd Professional Skills Competition and Basic Skills Academic Conference of the Future Professional Organization of Thailand, National Region.",
-    image: "/images/certificates/2024/img-2.png",
+    image: "/images/reward/2024/image002.png",
   },
   {
     category: "2023",
@@ -200,6 +195,6 @@ export const certificateData = [
       "1st Runner-up, Cloud Computing Management Skills at High Vocational Certificate Level",
     label:
       "33rd Professional Skills Competition and Basic Skills Academic Conference of the Future Professional Organization of Thailand, Northeastern Region.",
-    image: "/images/certificates/2023/img-1.png",
+    image: "/images/reward/2023/image001.png",
   },
 ];
