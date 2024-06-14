@@ -1,4 +1,4 @@
-import { Outfit } from "next/font/google";
+import { Kanit } from "next/font/google";
 import "./globals.css";
 
 // components
@@ -6,9 +6,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 // theme provider
-import { ThemeProvider } from "@/components/ThemeProvider";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 
-const outfit = Outfit({ subsets: ["latin"] });
+const kanit = Kanit({
+  subsets: ["latin", "thai"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata = {
   title: "Teerakan Otklan | Portfolio",
@@ -22,9 +25,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en' suppressHydrationWarning>
-      <body className={outfit.className}>
-        <ThemeProvider attribute='class' defaultTheme='light'>
+    <html lang="en" suppressHydrationWarning>
+      <body className={kanit.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <Navbar />
           {children}
           <Footer />
